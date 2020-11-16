@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static "src\auth.css" %}">
+    <title>Ministério do Meio Ambiente</title>
+</head>
+
+<body>
+    <span id="span">Estamos analisando as digitais, um instante...</span>
+    <div id="box">
+
+
+        <h1>Autenticação</h1>
+        <form method="POST" enctype="multipart/form-data"> {% csrf_token %}
+            <input type="text" for="username" name="username" placeholder="Informe seu Usuário" id="user" required>
+            <label for="file">Biometria</label>
+            <input type="file" accept="image/*" id="file" name="biometry">
+
+            <button type="submit" id="btn">Entrar</button>
+
+        </form>
+    </div>
+
+
+
+
+
+
+</body>
+<script>
+    document.querySelector('#btn').addEventListener('click', () => {
+        if (document.querySelector('#user').value != '') {
+            document.querySelector('#span').style.display = 'block'
+
+        }
+    })
+</script>
+
+</html>

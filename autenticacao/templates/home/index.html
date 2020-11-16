@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=H, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static "index.css" %}">
+    <title>Document</title>
+    <style>
+        body {
+            background: #D9D9D9;
+        }
+
+        #box {
+            width: 400px;
+            height: 180px;
+            margin: 150px auto 0;
+            background: white;
+            padding-top: 20px;
+            border: 5px solid #00B050;
+            border-radius: 52px;
+            text-align: center;
+        }
+        span{
+            font-size: 15pt;
+        }
+        .acessLevel{
+            font-size: 15pt;
+            font-weight: 900;   
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+
+
+        {% if autenticado is True %}
+        <h1>Autenticado com sucesso!</h1>
+        <span>Olá, {{username}}! Seu nível de acesso: {{ accessLevel }}</span>
+            {% if accessLevel == 1 %}
+            <span class="acessLevel">Acesso comum</span>
+            {% elif accessLevel == 2 %}
+            <span class="acessLevel">Diretores de divisões</span>
+            {% elif accessLevel == 3 %}
+            <span class="acessLevel">Ministro do Meio Ambiente</span>
+            {% endif %}
+        {% else %}
+        <h1>Falha na autenticação</h1>
+        <span>Tente novamente! Verifique se a biometria ou username estão corretos.</span>
+        {% endif %}
+
+        
+
+    </div>
+</body>
+
+</html>

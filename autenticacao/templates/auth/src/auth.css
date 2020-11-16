@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body {
+    line-height: 1;
+    background: #D9D9D9;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+::-webkit-input-placeholder {
+    font-weight: normal;
+    font-size: 16px;
+  }
+  ::-moz-placeholder {
+    font-weight: 400;
+    font-size: 16px;
+  }
+  :-ms-input-placeholder {
+    font-weight: 400;
+    font-size: 16px;
+  }
+  ::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#box{
+    width: 400px;
+    height: 180px;
+    margin: 150px auto 0;
+    background: white;
+    padding-top: 20px;
+    border: 5px solid #00B050;
+    border-radius: 52px;
+}
+
+h1, label, input{
+    text-align: center;
+    display: block;
+}
+
+h1{
+    font-family:    'Noto Serif', serif;
+    font-size: 24pt;
+    margin-bottom: 20px;
+}
+
+label{
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 12pt;
+}
+
+
+input{
+    margin: 10px auto 0;
+}
+
+input#user{
+    background: url(../assets/user.svg);
+    background-repeat: no-repeat;
+    outline: none;
+    text-align: start;
+    background-size: 20px;
+    background-position-y: 4px;
+    background-position-x: 3px;
+    margin-left: 70px;
+    width: 160px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    padding: 6px 20px 6px 30px;
+    font-size: 12pt;
+}
+
+input#file{
+    display: none;
+}
+
+label[for="file"] {
+    border: 1px solid #ccc;
+    padding: 6px 20px 6px 30px;
+    cursor: pointer;
+    margin: 0 0 20px 70px;
+    width: 160px;
+    background: url(../assets/fingerprint.svg);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position-y: 4px;
+    background-position-x: 3px;
+}
+label[for="file"]:hover{
+    background-color: rgb(248, 248, 248);
+}
+
+button{
+    border: 1px solid #ccc;
+    padding: 6px 20px;
+    cursor: pointer;
+    margin: 0 0 0 120px;
+    width: 100px;
+    background-color: #00B050;
+    color: white;
+    border-radius: 10px;
+
+}
+
+button:hover{
+    background-color: #09d163;
+}
+
+#span{
+    font-size: 15pt;
+    background-color: #00B050;
+    color: white;
+    padding: 12px;
+    border-radius: 15px;
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 322px;
+}
