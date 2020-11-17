@@ -45,7 +45,7 @@ $ cd venv/scripts & activate
 $ pip install django
 
 # Deactivate and go back to server folder
-$ deactivate && cd ../../
+$ deactivate & cd ../../
 
 # Install Fingerprint Enhancer
 $ pip install fingerprint_enhancer --user
